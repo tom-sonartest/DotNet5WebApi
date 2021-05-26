@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <SonarQubeTestProject>False</SonarQubeTestProject>
     <CodeAnalysisRuleSet>..\.sonarlint\tom-sonartest_dotnet5webapicsharp.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 
