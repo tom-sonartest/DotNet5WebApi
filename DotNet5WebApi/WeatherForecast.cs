@@ -22,6 +22,8 @@ namespace DotNet5WebApi
 
         }
 
+        public bool IsAboveFreezing => TemperatureC > 0;
+
         public string Summary { get; set; }
     }
 }
