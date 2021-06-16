@@ -28,17 +28,14 @@ steps:
     projectKey: 'tom-sonartest_DotNet5WebApi'
     projectName: 'DotNet5WebApi'
 
-- task: VSBuild@1
+-
+- task: DotNetCoreCLI@2
   inputs:
-    solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+    command: 'build'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'test'
 
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
 - task: SonarQubeAnalyze@4
 - task: SonarQubePublish@4
   inputs:
