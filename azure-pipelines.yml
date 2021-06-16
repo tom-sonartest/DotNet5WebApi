@@ -34,6 +34,8 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'test'
+    publishTestResults: true
+    arguments: '--collect "Code coverage"'
 
 - task: SonarQubeAnalyze@4
 - task: SonarQubePublish@4
