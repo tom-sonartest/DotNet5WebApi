@@ -28,7 +28,6 @@ steps:
     projectKey: 'tom-sonartest_DotNet5WebApi'
     projectName: 'DotNet5WebApi'
 
--
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
