@@ -18,5 +18,13 @@ namespace DotNet5WebApi.Tests
             forecast.TemperatureC = -6;
             Assert.IsTrue(forecast.IsFreezing());
         }
+        
+        [TestMethod()]
+        public void IsNotFreezingTest()
+        {
+            var forecast = new WeatherForecast();
+            forecast.TemperatureC = 6;
+            Assert.IsFalse(forecast.IsFreezing());
+        }
     }
 }
