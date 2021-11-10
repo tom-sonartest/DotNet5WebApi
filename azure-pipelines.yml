@@ -18,9 +18,16 @@ variables:
 steps:
 - task: NuGetToolInstaller@1
 
+- task: UseDotNet@2
+  inputs:
+    version: '6.0.x'
+    packageType: runtime
+    includePreviewVersions: true # Required for preview versions
+
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
+    
 - task: SonarQubePrepare@4
   inputs:
     SonarQube: 'TomsQube'
