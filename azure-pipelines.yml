@@ -27,8 +27,8 @@ steps:
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
-    
-- task: SonarQubePrepare@4
+
+- task: SonarQubePrepare@5
   inputs:
     SonarQube: 'TomsQube'
     scannerMode: 'MSBuild'
@@ -44,8 +44,8 @@ steps:
     publishTestResults: true
     arguments: '--collect "Code coverage"'
 
-- task: SonarQubeAnalyze@4
-- task: SonarQubePublish@4
+- task: SonarQubeAnalyze@5
+- task: SonarQubePublish@5
   inputs:
     pollingTimeoutSec: '300'
 
