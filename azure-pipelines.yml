@@ -38,7 +38,7 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
-    arguments: '-v:diag'
+    arguments: '/p:reportanalyzer=true -v:diag '
 
 - task: SonarQubeAnalyze@5
 - task: SonarQubePublish@5
