@@ -10,4 +10,8 @@
     <AdditionalFiles Include="..\.sonarlint\tom-sonartest_dotnet5webapi\CSharp\SonarLint.xml" Link="SonarLint.xml" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
 </Project>

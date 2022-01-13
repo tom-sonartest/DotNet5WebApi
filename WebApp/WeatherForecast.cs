@@ -4,6 +4,11 @@ namespace WebApp
 {
     public class WeatherForecast
     {
+        
+        //todo
+
+        private string a;
+        
         public DateTime Date { get; set; }
 
         public int TemperatureC { get; set; }

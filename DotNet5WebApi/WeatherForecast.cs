@@ -10,11 +10,7 @@ namespace DotNet5WebApi
 
         public float TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 
-        public bool IsFreezing()
-        {
-            return TemperatureC == 0;
-
-        }
+        public bool IsFreezing() => TemperatureC == 0;
 
         public bool IsBelowFreezing()
         {
@@ -22,8 +18,27 @@ namespace DotNet5WebApi
 
         }
 
+        public void emptymethod()
+        {
+            try
+            {
+
+            }
+            catch
+            {
+                throw NotSupportedException();
+            }
+
+        }
+
         public bool IsAboveFreezing => TemperatureC > 0;
 
         public string Summary { get; set; }
+
+        public enum Test
+        {
+            a = 1,
+            b = 2
+        }
     }
 }

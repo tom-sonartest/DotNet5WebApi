@@ -1,0 +1,11 @@
+﻿[*.{cs,vb}]
+
+# IDE0044: Add readonly modifier
+dotnet_diagnostic.IDE0044.severity = silent
+
+# IDE0051: Remove unused private members
+dotnet_diagnostic.IDE0051.severity = warning
+dotnet_diagnostic.CA1008.severity=warning
+
+# Default severity for all analyzer diagnostics
+dotnet_analyzer_diagnostic.severity = error
